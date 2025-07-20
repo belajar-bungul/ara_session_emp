@@ -25,8 +25,7 @@
             'ara_login_session_employee/static/src/css/custom_modal.css',
         ],
     },
-    'images': [
-    ],
+    "images": ['static/description/banner.png'],
     'license': 'AGPL-3',
     'installable': True,
     'auto_install': False,

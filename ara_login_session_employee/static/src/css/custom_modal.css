@@ -1,0 +1,96 @@
+div.alert.alert-danger {
+    z-index: 99999 !important;
+}
+
+header.o_navbar {
+    z-index: 999999 !important;
+}
+
+div.modal.d-block.o_technical_modal {
+    z-index: 999999 !important;
+}
+
+/* Target the parent .modal-content when child has class .custom_modal.modal-xs */
+.modal-content:has(.o_form_view.custom_modal.modal-xs.o_view_controller) {
+    /* Your desired overrides */
+    width: 400px;  /* Change width */
+    background-color: #f1f1f1;  /* Change background */
+    border-radius: 10px;  /* Add border radius */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow */
+    z-index: 999999 !important;
+}
+
+.o_popover.o-popover-bottom {
+    margin-top: 0.5rem;
+    z-index: 999999999 !important;
+}
+
+.popover {
+    z-index: 999999999 !important;
+}
+
+.modal-content.o_error_dialog:has(.o_form_view.custom_modal.modal-xs.o_view_controller) {
+    width: 340px !important;
+}
+
+.o_form_view.custom_modal.modal-xs.o_view_controller {
+    padding: 20px;  /* Add padding */
+    background-color: inherit;  /* Inherit background from parent */
+}
+
+.pulse-blob .icon {
+    animation: pulse 1s ease-in-out infinite;
+    width: 40px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    padding: 4px;
+}
+
+.pulse-blob:hover .icon {
+    background: rgb(212 93 8 / 8%);
+    border-radius: 0 0 8px 8px;
+}
+
+@keyframes pulse {
+    0% {
+        padding: 0px;
+    }
+
+    70% {
+        padding: 4px;
+    }
+
+    100% {
+        padding: 0px;     
+    }
+}
+
+.o_mail_chatter {
+    width: 30%;
+    max-width: 1000px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(222 222 222 / 94%) !important;
+    ;}
+
+::-webkit-scrollbar-track:hover {
+    background: rgb(125 125 125 / 95%) !important;
+    ;}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #363636;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cd0d0d;
+}

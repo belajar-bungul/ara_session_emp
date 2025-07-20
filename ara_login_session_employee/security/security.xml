@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="0">
+        <!-- access right -->
+        <record model="res.groups" id="group_access_activity_session">
+            <field name="name">Activity Session Access</field>
+        </record>
+    </data>
+</odoo>

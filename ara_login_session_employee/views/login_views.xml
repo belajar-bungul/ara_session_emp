@@ -1,0 +1,35 @@
+<odoo>
+    <template id="custom_navbar" inherit_id="web.layout">
+       <xpath expr="//body" position="inside">
+            <t t-if="not request.env.user._is_public() and not request.env.user._is_portal()">
+                <t t-if="not request.session.get('selected_employee')">
+                    <div role="alert" class="alert o-hidden-ios text-center alert-warning" style="
+                        font-size: 16pt;margin: 0 auto;position: absolute;left: 0;right: 0;bottom: 0;top: 0;display: flex;align-content: center;justify-content: center;flex-wrap: nowrap;align-items: center;
+                    ">
+                        <span class="oe_instance_register" style="
+                        max-width: 800px;
+                        padding: 1rem;">
+                            To proceed, please select the active <span class="oe_instance_buy alert-link text-decoration-underline">Employee</span> session by clicking the 
+                            <span class="oe_instance_buy alert-link text-decoration-underline">Defender</span> icon at the top of the screen.
+                        </span>
+                    </div>
+                </t>
+                <!-- Else, show session info -->
+                <t t-else="">
+                    <div class="custom-session-info" style="
+                        position: fixed;/* background: red; */display: flex;flex-direction: column;flex-wrap: nowrap;align-content: center;justify-content: center;align-items: center;padding: 0.4rem;height: 40px;/* margin-bottom: -40px; *//* width: 100px; *//* margin-right: 200px; *//* margin-left: 200px; */bottom: 0;z-index: 999;width: auto;margin: 0 auto;vertical-align: middle;align-self: center;
+                    ">
+                        <label id="session_employee" style="
+                            padding: 0.2rem 1.6rem;
+                            background: #aeaeae78;
+                            border-radius: 0.2rem;
+                            font-size: 0.8em;
+                            /* opacity: 0.4; */
+                            text-transform: uppercase;
+                        "><t t-esc="request.session.get('selected_employee', 'no session')"/></label>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo> 

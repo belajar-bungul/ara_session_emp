@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="ara_login_session_employee.can_be_purchased_pro" model="ir.default">
+    <field name="field_id" ref="product.field_product_product__purchase_ok"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"false"</field>
+  </record>
+  <record id="ara_login_session_employee.can_be_sold_product" model="ir.default">
+    <field name="field_id" ref="product.field_product_product__sale_ok"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="ara_login_session_employee.product_type_product" model="ir.default">
+    <field name="field_id" ref="product.field_product_product__detailed_type"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"combo"</field>
+  </record>
+</odoo>

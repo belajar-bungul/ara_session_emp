@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="ara_login_session_employee.SessionSystray">
+        <t t-if="!hasSelectedEmployee">
+            <div class="new_icon">
+                <!-- <div class="icon_div"> -->
+                <div>
+                    <button class="o_nav_entry" role="button" t-att-class="!hasSelectedEmployee ? 'pulse-blob' : ''" t-on-click="_openSession">
+                        <img class="icon" t-att-src="'/ara_login_session_employee/static/description/defender.png'" />
+                    </button>
+                </div>
+            </div>
+        </t>
+    </t>
+</templates>

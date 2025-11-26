@@ -31,6 +31,6 @@
     'auto_install': False,
     'post_init_hook': 'post_init_hook',
     'application': True,
-    'price' : 83.23,
+    'price' : 85.83,
     "currency": "USD",
 }

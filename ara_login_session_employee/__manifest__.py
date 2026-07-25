@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Employee-Based Session Auth – Login, Track, and Force Logout by Employee',
-    'version': '18.0.0.0.0',
+    'version': '19.0.0.0.0',
     'category': 'Extra Tools',
     'summary': 'Special Feature',
     'description': """Allow a single Odoo user account to serve multiple employees, each with their own tracked login session. Authenticate, monitor, and force logout sessions per employee — perfect for shared accounts with employee-based session control. """,
@@ -31,6 +31,6 @@
     'auto_install': False,
     'post_init_hook': 'post_init_hook',
     'application': True,
-    'price' : 85.83,
+    'price' : 94.83,
     "currency": "USD",
 }

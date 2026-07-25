@@ -1,23 +1,23 @@
-from odoo import models, api
+from odoo import api, models
 from odoo.http import request
-from werkzeug.local import LocalProxy
 
 
 class MailMessage(models.Model):
-    _inherit = 'mail.message'
+    _inherit = "mail.message"
 
-    @api.model
-    def create(self, values):
-        # Pastikan akses request.session hanya jika memang sedang dalam HTTP request
+    @api.model_create_multi
+    def create(self, vals_list):
         employee = False
-        if isinstance(request, LocalProxy):
-            try:
-                employee = request.session.get('selected_employee', False)
-            except RuntimeError:
-                employee = False
 
-        # Tambahkan info employee jika ada
-        if employee and 'body' in values:
-            values['body'] = f"{values['body']}\n- {employee}"
+        try:
+            if request and hasattr(request, "session"):
+                employee = request.session.get("selected_employee", False)
+        except Exception:
+            employee = False
 
-        return super(MailMessage, self).create(values)
+        if employee:
+            for vals in vals_list:
+                if vals.get("body"):
+                    vals["body"] = f"{vals['body']}<br/><b>Created by employee : {employee} </b>"
+
+        return super().create(vals_list)
